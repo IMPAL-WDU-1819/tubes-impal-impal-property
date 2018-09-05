@@ -1,0 +1,64 @@
+INSERT INTO Supplier VALUES ('SUP01', 'Aneka Steel Teknik'); 
+INSERT INTO Supplier VALUES ('SUP02', 'Dua Putra Petir');
+INSERT INTO Supplier VALUES ('SUP03', 'Trimas Perkasa');
+
+INSERT INTO Perusahaan VALUES ('PRS01', 'Agung Podomoro Land'); 
+INSERT INTO Perusahaan VALUES ('PRS02', 'Alam Sutera Realty'); 
+INSERT INTO Perusahaan VALUES ('PRS03', 'Bumi Citra Permai'); 
+
+
+INSERT INTO Gudang VALUES ('GDG01', 'Jakarta', 'PRS01'); 
+INSERT INTO Gudang VALUES ('GDG02', 'Bandung', 'PRS02'); 
+INSERT INTO Gudang VALUES ('GDG03', 'Tangerang', 'PRS03'); 
+
+
+INSERT INTO BahanBaku VALUES ('BBK01', 'Semen', '10kg', 'SUP01', 'GDG01');
+INSERT INTO BahanBaku VALUES ('BBK02', 'Keramik', '10 dus', 'SUP02', 'GDG02');
+INSERT INTO BahanBaku VALUES ('BBK03', 'Pasir', '15kg', 'SUP03', 'GDG03');
+
+
+INSERT INTO Properti VALUES ('PPT01', 'Rumah', 'Tipe 36', 'PRS01', '800000000');
+INSERT INTO Properti VALUES ('PPT02', 'Ruko', '2 Lantai', 'PRS02', '100000000');
+INSERT INTO Properti VALUES ('PPT03', 'Apartemen', 'Tipe Studio', 'PRS03', '500000000');
+
+INSERT INTO Bank VALUES ('BNK01', 'BNI'); 
+INSERT INTO Bank VALUES ('BNK02', 'Mandiri');
+INSERT INTO Bank VALUES ('BNK03', 'BCA');
+
+INSERT INTO Karyawan VALUES ('KRY01', 'Kiki');
+INSERT INTO Karyawan VALUES ('KRY02', 'Nini');
+INSERT INTO Karyawan VALUES ('KRY03', 'Nina');
+
+INSERT INTO Pelanggan VALUES ('PLG01', 'Jojo', 'Jln. Melati 01, Bandung');
+INSERT INTO Pelanggan VALUES ('PLG02', 'Lili', 'Jln. Kembang 02, Jakarta');
+INSERT INTO Pelanggan VALUES ('PLG03', 'Lulu', 'Jln. Mawar 02, Tangerang');
+
+INSERT INTO Pemesanan VALUES ('PMS01', 'PLG01', 'PPT01');
+INSERT INTO Pemesanan VALUES ('PMS02', 'PLG02', 'PPT02');
+INSERT INTO Pemesanan VALUES ('PMS03', 'PLG03', 'PPT03');
+
+
+INSERT INTO Pembayaran VALUES ('PBR01', 'BNK01', 'PRS01', 'PMS01', 'Kredit', 'KWT01');
+INSERT INTO Pembayaran VALUES ('PBR02', 'BNK02', 'PRS02', 'PMS02', 'Cash', 'KWT02');
+INSERT INTO Pembayaran VALUES ('PBR03', 'BNK03', 'PRS03', 'PMS03', 'Kredit', 'KWT03');
+
+
+INSERT INTO User_pengguna VALUES ('USR00', 'Admin', 'Admin00');
+INSERT INTO User_pengguna VALUES ('USR01', 'Jojo', 'Jojo01');
+INSERT INTO User_pengguna VALUES ('USR02', 'Lili', 'Lili02');
+INSERT INTO User_pengguna VALUES ('USR03', 'Lulu', 'Lulu03');
+
+
+INSERT INTO Tenagakerja VALUES ('TNK01', 'Asep', '1500000'); 
+INSERT INTO Tenagakerja VALUES ('TNK02', 'Agus', '1500000');
+INSERT INTO Tenagakerja VALUES ('TNK03', 'Arman', '1500000');
+
+INSERT INTO Arsitek VALUES ('ARS01', 'Budi',2500000,'Rumah'); 
+INSERT INTO Arsitek VALUES ('ARS02', 'Bagus',3500000,'Ruko');
+INSERT INTO Arsitek VALUES ('ARS03', 'Bambang',2500000,'Apartemen');
+
+
+INSERT INTO Proyek VALUES ('PRY01', 'TNK01', 'ARS01', 'PRS01');
+INSERT INTO Proyek VALUES ('PRY02', 'TNK02', 'ARS02', 'PRS02');
+INSERT INTO Proyek VALUES ('PRY03', 'TNK03', 'ARS03', 'PRS03');
+

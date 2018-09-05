@@ -1,0 +1,101 @@
+CREATE TABLE Supplier (
+    Id_supplier varchar(10) NOT NULL PRIMARY KEY,
+    Nama_supplier varchar(50)
+); 
+
+CREATE TABLE Perusahaan (
+    Id_perusahaan varchar(10) NOT NULL PRIMARY KEY,
+    Nama_perusahaan varchar(30)
+); 
+
+CREATE TABLE Gudang (
+    Id_gudang varchar(10) NOT NULL PRIMARY KEY,
+    Alamat_gudang varchar(200),
+    Id_perusahaan varchar(10),
+    FOREIGN KEY (Id_perusahaan) REFERENCES Perusahaan(Id_perusahaan)
+); 
+
+CREATE TABLE BahanBaku (
+    Id_bahanbaku varchar(10) NOT NULL PRIMARY KEY,
+    Nama_bahan varchar(20),
+    Deskripsi varchar(200),
+    Id_supplier varchar(10),
+    Id_gudang varchar(10),
+    FOREIGN KEY (Id_supplier) REFERENCES Supplier(Id_supplier),
+    FOREIGN KEY (Id_gudang) REFERENCES Gudang(Id_gudang)
+); 
+
+CREATE TABLE Properti (
+    Id_properti varchar(10) NOT NULL PRIMARY KEY,
+    Jenis_properti varchar(20),
+    Deskripsi varchar(200),
+    Id_perusahaan varchar(10),
+    Harga int,
+    FOREIGN KEY (Id_perusahaan) REFERENCES Perusahaan(Id_perusahaan)
+); 
+
+CREATE TABLE Bank (
+    Id_bank varchar(10) NOT NULL PRIMARY KEY,
+    Nama_Bank varchar(30)
+); 
+
+CREATE TABLE Karyawan (
+     Id_karyawan varchar(10) NOT NULL PRIMARY KEY,
+     Nama_karyawan varchar(30)
+);
+
+CREATE TABLE Pelanggan (
+     Id_pelanggan varchar(10) NOT NULL PRIMARY KEY,
+     Nama_pelanggan varchar(30),
+     Alamat varchar(50)
+
+);
+
+CREATE TABLE Pemesanan (
+    Id_pemesanan varchar(10) NOT NULL PRIMARY KEY,
+    Id_pelanggan varchar(10),
+    Id_properti varchar(10),
+    FOREIGN KEY (Id_pelanggan) REFERENCES Pelanggan(Id_pelanggan),
+    FOREIGN KEY (Id_properti) REFERENCES Properti(Id_properti)
+);
+
+CREATE TABLE Pembayaran (
+     No_pembayaran varchar(10) NOT NULL PRIMARY KEY,
+     Id_bank varchar(10), 
+     Id_perusahaan varchar(10),
+     Id_pemesanan varchar(10),
+     Jenis_pembayaran varchar(10),
+     Kwitansi varchar(10),
+     FOREIGN KEY (Id_bank) REFERENCES Bank(Id_bank),
+     FOREIGN KEY (Id_perusahaan) REFERENCES Perusahaan(Id_perusahaan),
+     FOREIGN KEY (Id_pemesanan) REFERENCES Pemesanan(Id_pemesanan)
+);
+
+CREATE TABLE User_pengguna (
+     Id_user varchar(10) NOT NULL PRIMARY KEY,
+     Nama_user varchar(30),
+     Password_user varchar(30)
+);
+
+CREATE TABLE Tenagakerja (
+    Id_tenagakerja varchar(10) NOT NULL PRIMARY KEY,
+    Nama_tenagakerja varchar(10),
+    Gaji int
+); 
+
+CREATE TABLE Arsitek (
+    Id_arsitek varchar(10) NOT NULL PRIMARY KEY,
+    Nama_arsitek varchar(10),
+    Gaji int,
+    Rancangan varchar(50)
+); 
+
+CREATE TABLE Proyek (
+     Id_proyek varchar(10) NOT NULL PRIMARY KEY,
+     Id_tenagakerja varchar(10),
+     Id_arsitek varchar(10),
+     Id_perusahaan varchar(10),
+     FOREIGN KEY (Id_tenagakerja) REFERENCES Tenagakerja(Id_tenagakerja),
+     FOREIGN KEY (Id_perusahaan) REFERENCES Perusahaan(Id_perusahaan),
+     FOREIGN KEY (Id_arsitek) REFERENCES Arsitek(Id_arsitek)
+);
