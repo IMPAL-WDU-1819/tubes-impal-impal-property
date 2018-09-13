@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="property.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+<body>
+	<a href="home_admin.html"><button type="button" class="btn btn-primary btn-lg" id="backbutton">Back</button></a>
+	<button type="button" class="btn btn-outline-secondary btn-sm" id="logout">Logout</button>
+
+	<h1 id="title">Materials Stock</h1>
+
+	<center>
+			<select title="Choose Warehouse" class="selectpicker">
+			  <optgroup label="Bandung">
+			    <option>Warehouse Ujungberung</option>
+			    <option>Warehouse Majalaya</option>
+			    <option>Warehouse Soetta</option>
+			  </optgroup>
+			  <optgroup label="Jabodetabek">
+			    <option>Warehouse Karawang</option>
+			    <option>Warehouse Bekasi</option>
+			    <option>Warehouse Depok</option>
+			  </optgroup>
+			</select>
+		<div class="table-responsive">          
+		  <table class="table" style="color : black; background: white;">
+		    <thead>
+		      <tr>
+		        <th>#</th>
+		        <th>Name</th>
+		        <th>Price</th>
+		        <th>Qty</th>
+		        <th>Other</th>
+		        <th>Status</th>
+		        <th></th>
+		      </tr>
+		    </thead>
+		    <tbody>
+		      <tr>
+		        <td>1</td>
+		        <td>Batu Bata</td>
+		        <td>1000/pcs</td>
+		        <td>900000</td>
+		        <td>Safe</td>
+		        <td><button type="button">Details</button></td>
+		      </tr>
+		      <tr bgcolor="yellow">
+		        <td>1</td>
+		        <td>Semen</td>
+		        <td>50000/zak</td>
+		        <td>40</td>
+		        <td>Reorder</td>
+		        <td><button type="button">Details</button></td>
+		      </tr>
+		    </tbody>
+		  </table>
+		  </div>
+		</div>
+	</center>
+	
+
+	<!--
+	<img src="img/mandiri.png" id="mandiri">
+	<img src="img/bri.png" id="bri">
+	<img src="img/bni.png" id="bni">
+	 -->
+
+</body>
+</html>

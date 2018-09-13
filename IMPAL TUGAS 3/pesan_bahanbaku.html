@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pemesanan Bahan Baku</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="property.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+<body>
+
+	<button type="button" class="btn btn-outline-secondary btn-sm" id="logout">Logout</button>
+
+	<h1 id="title">Message To Supplier</h1>
+
+	<div class="container" style="background-color: hsl(0, 0%, 24%, 0.3); ">
+		<center>
+		<form action="/action_page.php">
+  		  	<table>
+  		  		<tr>
+  					<td class="isiform"><b>Order</b></td>
+  					<td></td>
+  					<td>
+  						<select name="order">
+  							<option value="01">Besi</option>
+  							<option value="02">Paku</option>
+  							<option value="03">Kusen</option>
+  						</select>
+  					</td>
+  				</tr>
+
+  				<tr>
+  					<td class="isiform"><b>Sent To</b></td>
+  					<td></td>
+  					<td><textarea name="alm" rows="10" cols="30"></textarea></td>
+  				</tr>
+  		  	</table>
+  		  	<button type="button" class="btn btn-primary">Send</button>
+		</form> 
+		</center>
+	</div>
+
+
+</body>
+</html>
